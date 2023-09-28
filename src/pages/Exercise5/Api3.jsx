@@ -6,13 +6,15 @@ const Api3 = () => {
   const { data, isLoading, isError, error } = useUserQuery()
   console.log(data)
 
-  if(isLoading) return <p>loading...</p>
+  if(isLoading) return <div class="spinner-border m-5" role="status">
+  <span class="visually-hidden">Loading...</span>
+</div>
   if (isError) return <p>{error}</p>
 
   return (
     <div>
       {data && data.results.map((result) => (
-        <div key={result.id.value}>
+        <div key={result.id.value} className='d-flex align-items-center justify-content-center flex-column'>
           <img src={result.picture.large} style={{borderRadius: "50%"}}/>
           <h3>Fullname: {result.name.title} {result.name.first} {result.name.last}</h3>
           <span>email: {result.email}</span>
