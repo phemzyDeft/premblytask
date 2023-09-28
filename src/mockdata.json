@@ -1,24 +1,28 @@
 [
   {
     "id": 1,
+    "image": "https://i.dummyjson.com/data/products/3/1.jpg",
     "username": "oluwafemi",
     "fullname": "adesanya oluwafemi david",
     "age": 12
   },
   {
     "id": 2,
+    "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
     "username": "oluwafemi",
     "fullname": "adesanya oluwafemi david",
     "age": 12
   },
   {
     "id": 3,
+    "image": "https://i.dummyjson.com/data/products/15/1.jpg",
     "username": "oluwafemi",
     "fullname": "adesanya oluwafemi david",
     "age": 12
   },
   {
     "id": 4,
+    "image": "https://i.dummyjson.com/data/products/2/thumbnail.jpg",
     "username": "oluwafemi",
     "fullname": "adesanya oluwafemi david",
     "age": 12

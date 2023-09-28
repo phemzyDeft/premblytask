@@ -1,27 +1,15 @@
-import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react"
-import { configureStore } from "@reduxjs/toolkit";
-import CartSlice from "../redux/CartSlice";
-// import Mockdata from  "../mockdata.json"
-
-export const Jsondata = createApi({
-  reducerPath: "Alldata",
-  baseQuery: fetchBaseQuery({ baseUrl: "../mockdata.json" }),
-  endpoints: (builder) => ({
-    getAllData: builder.query({
-      query: () => "/",
-    }),
-    getSingleData: builder.query({
-      query: (product) => `products/search?q=${product}`
-    })
-  })
-})
-
+// store.js
+import { configureStore } from '@reduxjs/toolkit';
+import cartReducer from '../redux/CartSlice'; // Import your cart slice
+import { Jsondata } from '../redux/Jsondata'; // Import your data slice
 
 const store = configureStore({
-  reducer: ({
-    cart: CartSlice
-  })
-})
+  reducer: {
+    cart: cartReducer, // Add cartReducer to the store
+    [Jsondata.reducerPath]: Jsondata.reducer, // Add data slice reducer
+  },
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware().concat(Jsondata.middleware),
+});
 
-export const { useGetAllDataQuery, useGetSingleDataQuery } = Jsondata;
-export default store
+export default store;

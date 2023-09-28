@@ -1,14 +1,11 @@
 import { useState } from 'react'
-import { useGetSingleDataQuery, useGetAllDataQuery } from '../store/data'
+import { useGetSingleDataQuery } from '../redux/Jsondata'
 
 function Exercise1() {
   const [input, setInput] = useState("")
 
   const { data: singleData, error, isError, isLoading } = useGetSingleDataQuery(input)
-  // console.log(singleData)
-
-  const { data } = useGetAllDataQuery()
-  console.log(data)
+  console.log(singleData)
 
   if (isLoading) return <p>loading...</p>
   if (isError) return <p>{error}</p>
@@ -18,13 +15,9 @@ function Exercise1() {
     item.category.toLowerCase().includes(input.toLowerCase())
   )
     : []
-  
-  // const dispatch = useDispatch()
-  // const selector = useSelector((state)=> state.user)
 
   return (
     <>
-      <div>hello world</div>
       <div style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
         <div style={{width: "100%", textAlign: "center"}}>
           <h3>Search for item: </h3>
