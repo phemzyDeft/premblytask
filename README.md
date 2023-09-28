@@ -1,8 +1,25 @@
-# React + Vite
+to visit each pages or route
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+task 1
+http://localhost:5174/
 
-Currently, two official plugins are available:
+task 2
+http://localhost:5174/slides
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+task 3
+http://localhost:5174/cart
+http://localhost:5174/checkout
+
+task 4
+not enough time t implement
+
+task 5
+first task 0f no 5
+http://localhost:5174/api1
+
+second task 0f no 5
+http://localhost:5174/api2
+
+third task 0f no 5
+http://localhost:5174/api3
+
