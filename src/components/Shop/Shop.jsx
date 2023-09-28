@@ -6,6 +6,9 @@ const Shop = ({ data }) => {
   const {id, image, age, username, fullname} = data;
 
   const dispatch = useDispatch()
+  const addItemToCart = () => {
+    dispatch(addToCart(data))
+  }
   return (
     <div className="product text-align-center">
       <img src={image} alt={username} style={{width: "70%", height: "50%", overflow:"hidden"}}/>
@@ -13,7 +16,7 @@ const Shop = ({ data }) => {
         <p><b>{username}</b></p>
         <p>$ {age}</p>
       </div>
-      <button className='addToCartBttn' onClick={()=>dispatch(addToCart({item}))}>Add To Cart </button>
+      <button className='addToCartBttn' onClick={addItemToCart}>Add To Cart </button>
     </div>
   )
 }
