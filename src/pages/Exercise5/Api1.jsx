@@ -4,19 +4,21 @@ import { useQuoteQuery } from '../../redux/Apitests/Apitest1'
 const Api1 = () => {
 
   const { data, isLoading, isError, error } = useQuoteQuery()
-  console.log(data)
+  console.log("mydata", data)
 
   if(isLoading) return <p>loading...</p>
   if (isError) return <p>{error}</p>
 
+  // console.log(data)
+
   return (
     <div>
-      {data && data.results.map((quote) => (
-        <div key={quote._id}>
-          <p>{quote.content}</p>
-          <p>{quote.author}</p>
+      {data && data?.results.map((quote) => (
+        <div key={quote?._id}>
+          <p>{quote?.content}</p>
+          <p>{quote?.author}</p>
           <hr />
-        </div>
+        </div>                        
       ))}
     </div>
   )

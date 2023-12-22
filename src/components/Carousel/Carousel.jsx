@@ -25,10 +25,11 @@ const Carousel = ({ data }) => {
               src={item.src}
               alt={item.alt}
               key={index}
+              width={900}
               className={slide === index ? "slide" : "slide slide-hidden"}
 
             />
-            <p style={{ fontSize: "2rem", position: "absolute", top: "10rem", textAlign: "center", display: "flex", alignItems: "center", justifyContent: "center", color: "white" }}>{item.caption}</p>
+            <p style={{ fontSize: "2rem", position: "absolute", top: "20rem", left: "40rem", textAlign: "center", display: "flex", alignItems: "center", justifyContent: "center", color: "white" }}>{item.caption}</p>
           </div>
           
         );
