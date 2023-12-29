@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { useGetSingleDataQuery } from '../redux/Jsondata'
 
-function Exercise1() {
+function ExerciseOne() {
   const [input, setInput] = useState("")
 
   const { data: singleData, error, isError, isLoading } = useGetSingleDataQuery(input)
@@ -36,4 +36,4 @@ function Exercise1() {
   )
 }
 
-export default Exercise1
+export default ExerciseOne

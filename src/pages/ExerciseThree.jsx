@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 import  Mockdata from "../mockdata.json"
 
 
-const Exercise3 = () => {
+const ExerciseThree = () => {
 
   const allProduct = useSelector((state) => state.cart.cart)
   console.log(allProduct)
@@ -31,4 +31,4 @@ const Exercise3 = () => {
   )
 }
 
-export default Exercise3
+export default ExerciseThree

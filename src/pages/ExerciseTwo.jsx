@@ -2,7 +2,7 @@ import React from 'react'
 import Carousel from '../components/Carousel/Carousel'
 import { slides } from '../../payloads/Exercise2data'
 
-const Exercise2 = () => {
+const ExerciseTwo = () => {
   return (
     <div className='slider'>
       <Carousel data={ slides } />
@@ -10,4 +10,4 @@ const Exercise2 = () => {
   )
 }
 
-export default Exercise2
+export default ExerciseTwo
