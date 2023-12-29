@@ -6,7 +6,12 @@ const Api1 = () => {
   const { data, isLoading, isError, error } = useQuoteQuery()
   console.log("mydata", data)
 
-  if(isLoading) return <p>loading...</p>
+  if (isLoading) return (
+    <div className='d-flex align-items-center justify-content-center' style={{height: "100vh"}}>
+      <div class="spinner-border" role="status">
+      </div>
+    </div>
+  )
   if (isError) return <p>{error}</p>
 
   // console.log(data)
@@ -18,7 +23,7 @@ const Api1 = () => {
           <p>{quote?.content}</p>
           <p>{quote?.author}</p>
           <hr />
-        </div>                        
+        </div>
       ))}
     </div>
   )

@@ -6,9 +6,12 @@ const Api3 = () => {
   const { data, isLoading, isError, error } = useUserQuery()
   console.log(data)
 
-  if(isLoading) return <div className="spinner-border m-5 d-flex align-items-center justify-content-center vh-100" role="status">
-  <span class="visually-hidden">Loading...</span>
-</div>
+  if(isLoading) return(
+    <div className='d-flex align-items-center justify-content-center' style={{height: "100vh"}}>
+    <div class="spinner-border" role="status">
+    </div>
+  </div>
+    )
   if (isError) return <p>{error}</p>
 
   return (
