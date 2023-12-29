@@ -7,8 +7,8 @@ const Api1 = () => {
   console.log("mydata", data)
 
   if (isLoading) return (
-    <div className='d-flex align-items-center justify-content-center' style={{height: "100vh"}}>
-      <div class="spinner-border" role="status">
+    <div className='d-flex align-items-center justify-content-center' style={{ height: "100vh" }}>
+      <div className="spinner-border" role="status">
       </div>
     </div>
   )
@@ -17,12 +17,18 @@ const Api1 = () => {
   // console.log(data)
 
   return (
-    <div>
+    <div className='py-4'>
       {data && data?.results.map((quote) => (
-        <div key={quote?._id}>
-          <p>{quote?.content}</p>
-          <p>{quote?.author}</p>
-          <hr />
+        <div className="container">
+          <div className="row">
+            <div key={quote?._id} className='col'>
+              <div className="">
+                <p><strong>Content: </strong>{quote?.content}</p>
+                <p><strong>User:  </strong>{quote?.author}</p>
+              </div>
+              <hr />
+            </div>
+          </div>
         </div>
       ))}
     </div>
