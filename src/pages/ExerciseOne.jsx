@@ -7,7 +7,12 @@ function ExerciseOne() {
   const { data: singleData, error, isError, isLoading } = useGetSingleDataQuery(input)
   console.log(singleData)
 
-  if (isLoading) return <p>loading...</p>
+  if (isLoading) return (
+    <div className='d-flex align-items-center justify-content-center' style={{ height: "100vh" }}>
+    <div className="spinner-border" role="status">
+    </div>
+  </div>
+  )
   if (isError) return <p>{error}</p>
 
   const filteredproduct = singleData ? singleData.products.filter(item =>
